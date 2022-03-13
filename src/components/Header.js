@@ -8,19 +8,19 @@ function Header() {
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-        <p>
+    
           <a href="#">Model S</a>
-        </p>
-        <p>
+        
           <a href="#">Model Y</a>
-        </p>
-        <p>
+       
           <a href="#">Model 3</a>
-        </p>
-        <p>
+       
           <a href="#">Model X</a>
-        </p>
+        
       </Menu>
+      <RightMenu>
+          <a href = ""
+      </RightMenu>
     </Container>
   );
 }
