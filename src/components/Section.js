@@ -4,20 +4,20 @@ import styled from "styled-components";
 function Section({
   title,
   description,
-  backgroundImg,
   leftBtnText,
   rightBtnText,
+  backgroundImg,
 }) {
   return (
-    <Wrap>
+    <Wrap bgImage={backgroundImg}>
       <ItemText>
-        <h1>{props.title}</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </ItemText>
       <Buttons>
         <ButtonGroup>
-          <LeftButton>Custom Order</LeftButton>
-          <RightButton>Existing Inventory</RightButton>
+          <LeftButton>{leftBtnText}</LeftButton>
+          <RightButton>{rightBtnText}</RightButton>
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg"></DownArrow>
       </Buttons>
@@ -29,7 +29,7 @@ const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-image: url("/images/model-s.jpg");
+  background-image: ${(props) => `url("/images/${props.bgImage}")`};
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
