@@ -1,11 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-function Section() {
+function Section({
+  title,
+  description,
+  backgroundImg,
+  leftBtnText,
+  rightBtnText,
+}) {
   return (
     <Wrap>
       <ItemText>
-        <h1>Model S</h1>
+        <h1>{props.title}</h1>
         <p>Order Online for Touchless Delivery</p>
       </ItemText>
       <Buttons>
@@ -40,6 +46,9 @@ const ItemText = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   margin-buttom: 30px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftButton = styled.div`
@@ -58,7 +67,11 @@ const LeftButton = styled.div`
   margin: 8px;
 `;
 
-const RightButton = styled(LeftButton)``;
+const RightButton = styled(LeftButton)`
+  background: white;
+  opacity: 0.65;
+  color: black;
+`;
 
 const DownArrow = styled.img`
   margin-top: 20px;
