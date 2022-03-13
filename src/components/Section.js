@@ -8,11 +8,13 @@ function Section() {
         <h1>Model S</h1>
         <p>Order Online for Touchless Delivery</p>
       </ItemText>
-
-      <ButtonGroup>
-        <LeftButton>Custom Order</LeftButton>
-        <RightButton>Existing Inventory</RightButton>
-      </ButtonGroup>
+      <Buttons>
+        <ButtonGroup>
+          <LeftButton>Custom Order</LeftButton>
+          <RightButton>Existing Inventory</RightButton>
+        </ButtonGroup>
+        <DownArrow src="/images/down-arrow.svg"></DownArrow>
+      </Buttons>
     </Wrap>
   );
 }
@@ -24,6 +26,10 @@ const Wrap = styled.div`
   background-image: url("/images/model-s.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const ItemText = styled.div`
@@ -31,7 +37,10 @@ const ItemText = styled.div`
   text-align: center;
 `;
 
-const ButtonGroup = styled.div``;
+const ButtonGroup = styled.div`
+  display: flex;
+  margin-buttom: 30px;
+`;
 
 const LeftButton = styled.div`
   background-color: rgba(23, 26, 23, 0.8);
@@ -45,8 +54,19 @@ const LeftButton = styled.div`
   opacity: 0.85;
   text-transform: uppercase;
   font-size: 12px;
+  cursor: pointer;
+  margin: 8px;
 `;
 
 const RightButton = styled(LeftButton)``;
+
+const DownArrow = styled.img`
+  margin-top: 20px;
+  height: 40px;
+  animation: animateDown infinite 1.5s;
+  overflow-x: hidden;
+`;
+
+const Buttons = styled.div``;
 
 export default Section;
