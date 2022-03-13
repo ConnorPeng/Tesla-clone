@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Section from "./Section";
 
 function Home() {
-  return <Container></Container>;
+  return (
+    <Container>
+      <Section />
+    </Container>
+  );
 }
 
 const Container = styled.div`
