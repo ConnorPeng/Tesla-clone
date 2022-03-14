@@ -8,18 +8,18 @@ function Header() {
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-    
-          <a href="#">Model S</a>
-        
-          <a href="#">Model Y</a>
-       
-          <a href="#">Model 3</a>
-       
-          <a href="#">Model X</a>
-        
+        <a href="#">Model S</a>
+
+        <a href="#">Model Y</a>
+
+        <a href="#">Model 3</a>
+
+        <a href="#">Model X</a>
       </Menu>
       <RightMenu>
-          <a href = ""
+        <a href="#">Shop</a>
+        <a href="#">Tesla Account</a>
+        <img src="/images/menu_icon.svg" />
       </RightMenu>
     </Container>
   );
@@ -41,11 +41,28 @@ const Menu = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
-  p {
+  a {
     font-weight: 600;
     text-transform: uppercase;
     padding: 0 10px;
     flex-wrap: nowrap;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const RightMenu = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+  }
+  img {
+    cursor: pointer;
   }
 `;
 
