@@ -13,13 +13,12 @@ function Header() {
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
-        <a href="#">Model S</a>
-
-        <a href="#">Model Y</a>
-
-        <a href="#">Model 3</a>
-
-        <a href="#">Model X</a>
+        {cars &&
+          cars.map((car, index) => (
+            <a key={index} href="#">
+              {car}
+            </a>
+          ))}
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
@@ -36,6 +35,12 @@ function Header() {
             onClick={() => setBurgerStatus(false)}
           />
         </CloseWrapper>
+        {cars &&
+          cars.map((car, index) => (
+            <li key={index}>
+              <a href="#">{car}</a>
+            </li>
+          ))}
         <li>
           <a href="#">Existing Inventory</a>
         </li>
