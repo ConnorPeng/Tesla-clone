@@ -21,6 +21,23 @@ function Header() {
         <a href="#">Tesla Account</a>
         <img src="/images/menu_icon.svg" />
       </RightMenu>
+      <BurgerNav>
+        <li>
+          <a href="#">Existing Inventory</a>
+        </li>
+        <li>
+          <a href="#">Used Inventory</a>
+        </li>
+        <li>
+          <a href="#">Trade-in</a>
+        </li>
+        <li>
+          <a href="#">Cybertruck</a>
+        </li>
+        <li>
+          <a href="#">Roadster</a>
+        </li>
+      </BurgerNav>
     </Container>
   );
 }
@@ -65,6 +82,15 @@ const RightMenu = styled.div`
   img {
     cursor: pointer;
   }
+`;
+
+const BurgerNav = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  width: 300pxl;
 `;
 
 export default Header;
