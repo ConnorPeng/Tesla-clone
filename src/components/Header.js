@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 function Header() {
@@ -22,6 +22,9 @@ function Header() {
         <img src="/images/menu_icon.svg" />
       </RightMenu>
       <BurgerNav>
+        <CloseWrapper>
+          <img src="/images/close_icon.svg" />
+        </CloseWrapper>
         <li>
           <a href="#">Existing Inventory</a>
         </li>
@@ -93,6 +96,26 @@ const BurgerNav = styled.div`
   background-color: white;
   width: 300pxl;
   z-index: 16;
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    a {
+      font-weight: 600;
+    }
+  }
+`;
+
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  img {
+    cursor: pointer;
+  }
 `;
 
 export default Header;
