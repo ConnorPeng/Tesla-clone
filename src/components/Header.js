@@ -52,6 +52,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 `;
 
 const Menu = styled.div`
@@ -91,6 +92,7 @@ const BurgerNav = styled.div`
   right: 0;
   background-color: white;
   width: 300pxl;
+  z-index: 16;
 `;
 
 export default Header;
