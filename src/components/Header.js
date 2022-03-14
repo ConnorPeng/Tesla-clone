@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 function Header() {
+  const [burgerStatus, setBurgerStatus] = useState(false);
   return (
     <Container>
       <a>
@@ -21,7 +22,7 @@ function Header() {
         <a href="#">Tesla Account</a>
         <img src="/images/menu_icon.svg" />
       </RightMenu>
-      <BurgerNav>
+      <BurgerNav show={burgerStatus}>
         <CloseWrapper>
           <img src="/images/close_icon.svg" />
         </CloseWrapper>
@@ -101,6 +102,7 @@ const BurgerNav = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
+  transform: translateX(100%);
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
